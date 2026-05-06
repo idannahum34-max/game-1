@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>מביך רצח — משחק קלפים ישראלי 18+</title>
+    <meta name="description" content="משחק הקלפים הישראלי שמוכיח שלכולם יש צד אפל. בחרו חבילות, הצחיקו חברים, ותנו לשופט להחליט מי הכי מביך." />
+    <meta name="theme-color" content="#000000" />
+
+    <!-- Heebo font — Hebrew-first, bold weights -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
+
+    <style>
+      html, body {
+        background: #000;
+        color: #fff;
+        direction: rtl;
+        font-family: 'Heebo', 'Arial Hebrew', sans-serif;
+      }
+      /* Prevent FOUC */
+      #root { min-height: 100vh; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <!-- Analytics (optional - only if env variables are set) -->
+    <script>
+      if (import.meta.env.VITE_ANALYTICS_ENDPOINT && import.meta.env.VITE_ANALYTICS_WEBSITE_ID) {
+        const script = document.createElement('script');
+        script.defer = true;
+        script.src = import.meta.env.VITE_ANALYTICS_ENDPOINT + '/umami';
+        script.setAttribute('data-website-id', import.meta.env.VITE_ANALYTICS_WEBSITE_ID);
+        document.head.appendChild(script);
+      }
+    </script>
+  </body>
+</html>
